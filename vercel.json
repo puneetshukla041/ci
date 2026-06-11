@@ -1,29 +1,8 @@
 {
-  "buildCommand": "next build",
-  "devCommand": "next dev",
-  "installCommand": "npm ci",
   "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm ci",
   "env": {
-    "NEXT_PUBLIC_API_URL": {
-      "required": false
-    }
-  },
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store, max-age=0"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-page",
-      "destination": "/",
-      "permanent": true
-    }
-  ]
+    "NEXT_PUBLIC_API_URL": "@next_public_api_url"
+  }
 }
